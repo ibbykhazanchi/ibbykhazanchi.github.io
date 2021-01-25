@@ -112,8 +112,13 @@ h3 {font-size: var(--fs-h3) }
     box-shadow: var(--bs);
 }
 
+.section__subtitle--intro-portfolio{
+    font-size: var(--fs-body);
+}
+
 .section__subtitle--intro,
-.section__subtitle--about{
+.section__subtitle--about,
+.section__subtitle--intro-portfolio{
     background: var(--clr-accent);
     padding: .25em 1em;
     font-family: var(--ff-secondary);
@@ -249,7 +254,8 @@ header {
         z-index: 2;
     }
 
-    .section__subtitle--intro {
+    .section__subtitle--intro,
+    .section__subtitle--intro-portfolio {
         align-self: flex-start;
         grid-column: -1 / 1;
         grid-row: 2;
@@ -407,4 +413,23 @@ header {
 
 .social-list__link{
     padding: 0.5em;
+}
+
+/* portfolio item */
+.portfolio-item-individual {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfolio-item-individual__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
