@@ -295,8 +295,13 @@ header {
 .about-me {
     max-width: 1000px;
     margin: 0 auto;
+    margin-bottom: -2em;
 }
-
+.about-me__body {
+    text-align: center;
+    justify-content: left;
+}
+/*
 @media (min-width: 600px){
     .about-me{
         display: grid;
@@ -314,19 +319,15 @@ header {
     .section__subtitle--about{
         align-self: flex-start;
         grid-column: -1 / 1;
-        grid-row: 2;
+        grid-row: 3;
         text-align: left;
         position: relative;
         left: -1.5em;
         width: calc(100% + 2em);
         margin-bottom: -1em;
     }
-    .about-me__img{
-        grid-area: img;
-        position: relative;
-        z-index: 2;
-    }
 }
+*/
 
 /* my work */
 
