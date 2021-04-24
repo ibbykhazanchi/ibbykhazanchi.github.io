@@ -237,14 +237,14 @@ header {
     display: inline-block;
 }
 
-/*
+
 @media (min-width: 600px) {
     .intro {
         display: block;
         width: min-content;
         margin: 0 auto;
         column-gap: 1em;
-        /*
+        
         grid-template-areas: 
             "img title"
             "img subtitle";
@@ -263,7 +263,7 @@ header {
         width: calc(100% + 1.5em);
     }
 }
-*/
+
 .my-services {
     margin-top: -5em;
     text-align: center;
