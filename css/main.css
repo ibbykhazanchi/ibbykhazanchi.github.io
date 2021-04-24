@@ -428,12 +428,12 @@ header {
 /* portfolio item */
 .portfolio-item-individual {
     padding: 0 2em 2em;
-    /*max-width:100%;*/
+    max-width:100%;
     margin: 0 auto;
 }
 
 .portfolio-item-individual p {
-    /*max-width: 100%;*/
+    max-width: 100%;
     position: relative;
     margin-left: auto;
     margin-right: auto;
