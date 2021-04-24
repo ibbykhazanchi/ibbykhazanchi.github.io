@@ -237,7 +237,7 @@ header {
     display: inline-block;
 }
 
-
+/*
 @media (min-width: 600px) {
     .intro {
         display: block;
@@ -263,7 +263,7 @@ header {
         width: calc(100% + 1.5em);
     }
 }
-
+*/
 .my-services {
     margin-top: -5em;
     text-align: center;
@@ -365,7 +365,7 @@ header {
     transition: 
     transform 750ms cubic-bezier(.5, 0, .5, 1)
     opacity 250ms linear;
-    width: 500px;
+    width: 400px;
     height: 100%;
 }
 
