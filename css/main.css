@@ -53,6 +53,7 @@ section{
 }
 img{
     display: block;
+    min-width: 50%;
     max-width: 100%;
 }
 
@@ -384,7 +385,7 @@ header {
 
 .Porfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
 }
 
 .Porfolio__item {
@@ -396,6 +397,8 @@ header {
     transition: 
     transform 750ms cubic-bezier(.5, 0, .5, 1)
     opacity 250ms linear;
+    height:100%;
+    width: 100%;
 }
 
 .Porfolio__item:focus{
