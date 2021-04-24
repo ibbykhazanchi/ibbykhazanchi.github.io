@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, intial-scale = 1.0">
+        <title> Ibrahim Porfolio Website</title>
+        <link rel = "stylesheet" href = "https://cdnjs.cloudfare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+        integrity = "sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+        <link href = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css" />
+        <script src="https://kit.fontawesome.com/ec2bbbe863.js" crossorigin="anonymous"></script>
+
+
+    </head>
+    <body>
+        <header>
+            <div class = "logo">
+                <img src = "" alt="">
+            </div>
+            <button class = "nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class = "nav__item"><a href="index.html" class="nav__list">Home</a></li>
+                    <li class = "nav__item"><a href="index.html#services" class="nav__list">Quick Points</a></li>
+                    <li class = "nav__item"><a href="index.html#about" class="nav__list">Experience</a></li>
+                    <li class = "nav__item"><a href="index.html#Work" class="nav__list">My Work</a></li>
+
+                </ul>
+            </nav>
+        </header>
+
+        <!--- Introduction-->
+        <section class="intro" id="home">
+            <h1 class = "section__title section__title--intro">
+                L1 & L2 <strong> Cache Simulator </strong>
+            </h1>
+            <p class= "section__subtitle section__subtitle--intro-portfolio">
+                CACHE SIMULATOR FOR MY COMPUTER ARCHITECTURE CLASS
+            </p>
+        </section>
+
+        <div class= "portfolio-item-individual">
+            <p>This is a program I wrote for my Computer Architecture and Assembly class. We basically had to simulate an L1 and L2 cache using C. Our program had to represent sets, associativity, and blocks, and we also had to implement FIFO and LRU replacement policies.</p>
+            <img src = "imgs/cache.jpg" alt="birthday image" class = "portfolio-item-individual__img">
+            <p>I really liked this project because it was the grand-finale to the whole class. Also, our program had to satisfy thousands of test cases, so I really had to ensure I was writing robust code. Another layer of complexity was writing this in C, a very unforgiving language; thus, I had to be aware of C's memory management system. I used bitwise operations to efficiently compute tag bits and set bits for indexing memory addresses. I'm happy to say that I got a perfect score on this assignment!</p>
+            
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <a href="mailto:khajanchi.ibrahim@gmail.com" class= "footer__link">email me!</a>
+            <ul class="social-list">
+                <li class="social-list__item"> 
+                    <a class="social-list__link" href="https://github.com/ibbykhazanchi">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item"> 
+                    <a class="social-list__link" href="https://www.linkedin.com/in/ibrahimkhajanchi/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item"> 
+                    <a class="social-list__link" href="https://www.youtube.com/channel/UC16205vRkOJui8BtsWrK1BQ/videos">
+                        <i class="fab fa-youtube"></i></a>
+                </li>
+            </ul>
+        </footer>
+
+        <script src= "js/index.js"></script>
+    </body>
+</html>

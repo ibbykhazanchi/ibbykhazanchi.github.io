@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, intial-scale = 1.0">
+        <title> Ibrahim Porfolio Website</title>
+        <link rel = "stylesheet" href = "https://cdnjs.cloudfare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+        integrity = "sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+        <link href = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css" />
+        <script src="https://kit.fontawesome.com/ec2bbbe863.js" crossorigin="anonymous"></script>
+
+
+    </head>
+    <body>
+        <header>
+            <div class = "logo">
+                <img src = "" alt="">
+            </div>
+            <button class = "nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class = "nav__item"><a href="index.html" class="nav__list">Home</a></li>
+                    <li class = "nav__item"><a href="index.html#services" class="nav__list">Quick Points</a></li>
+                    <li class = "nav__item"><a href="index.html#about" class="nav__list">Experience</a></li>
+                    <li class = "nav__item"><a href="index.html#Work" class="nav__list">My Work</a></li>
+
+                </ul>
+            </nav>
+        </header>
+
+        <!--- Introduction-->
+        <section class="intro" id="home">
+            <h1 class = "section__title section__title--intro">
+               Command Line <strong> Two-Player Chess </strong>
+            </h1>
+            <p class= "section__subtitle section__subtitle--intro-portfolio">
+                A command line chess game for two people
+            </p>
+        </section>
+
+        <div class= "portfolio-item-individual">
+            <p>Calling out all Queen's Gambit fans!! This is a program I had to write for my Software Methodology class. It's exactly what it sounds & looks like: a two-player chess game played on the command line with built-in game control. This program was written in <b> Java</b>.</p>
+            <img src = "imgs/chess.png" alt="birthday image" class = "portfolio-item-individual__img" style="width: 50%">
+            <p>On the surface, the program seems pretty simple, but in practice, it came out to be quite difficult. We used a bunch of OOP principles to make our life easier, including the use of <b>abstract classes</b> and <b> interfaces</b> for polymorphism. For example, we made one of our abstract classes was ChessPiece, and all of the individual piece classes would extend this class. We also made interfaces for diagonal movers (Queen, Bishop) as well as forward movers (Queen, Rook, Pawn) that included a bunch of default methods.</p>
+            <p>I really liked this project because I saw how OOP can allow for code reuse, making a developer's life easier. The hardest part was figuring out an algorithm to detect CHECKMATE. What I did was check all of the king's vulnerabilities (what pieces could potentially put the king in check) and from there, determine if a checkmate could be made. I thought about how I would determine a check-mate in real life and then thought about how I could translate that into code in the most algorithmically efficient way.The end result is a highly intelligent chess CPU that knows what's a legal move and what's a checkmate. Future projects might be making an AI for the player to play against. </p>
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <a href="mailto:khajanchi.ibrahim@gmail.com" class= "footer__link">email me!</a>
+            <ul class="social-list">
+                <li class="social-list__item"> 
+                    <a class="social-list__link" href="https://github.com/ibbykhazanchi">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item"> 
+                    <a class="social-list__link" href="https://www.linkedin.com/in/ibrahimkhajanchi/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item"> 
+                    <a class="social-list__link" href="https://www.youtube.com/channel/UC16205vRkOJui8BtsWrK1BQ/videos">
+                        <i class="fab fa-youtube"></i></a>
+                </li>
+            </ul>
+        </footer>
+
+        <script src= "js/index.js"></script>
+    </body>
+</html>

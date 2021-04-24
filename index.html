@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, intial-scale = 1.0">
+        <title> Ibrahim Porfolio Website</title>
+        <link rel = "stylesheet" href = "https://cdnjs.cloudfare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+        integrity = "sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+        <link href = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css" />
+        <script src="https://kit.fontawesome.com/ec2bbbe863.js" crossorigin="anonymous"></script>
+
+
+    </head>
+    <body>
+        <header>
+            <div class = "logo">
+                <img src = "" alt="">
+            </div>
+            <button class = "nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class = "nav__item"><a href="#home" class="nav__list">Home</a></li>
+                    <li class = "nav__item"><a href="#services" class="nav__list">Quick Points</a></li>
+                    <li class = "nav__item"><a href="#about" class="nav__list">Experience</a></li>
+                    <li class = "nav__item"><a href="#Work" class="nav__list">My Work</a></li>
+
+                </ul>
+            </nav>
+        </header>
+
+        <!--- Introduction-->
+        <section class="intro" id="home">
+            <h1 class = "section__title section__title--intro">
+                Hi, I am <strong> Ibrahim Khajanchi </strong>
+            </h1>
+            <p class= "section__subtitle section__subtitle--intro">
+                CS AND BUSINESS STUDENT
+            </p>
+            <img src ="imgs/ibum.gif" style="  display: block;
+            margin-left: auto;
+            margin-right: auto;
+            min-width: 15%;
+            width: 15%;">
+        </section>
+
+        <!-- My Services-->
+        <section class = "my-services" id="services">
+            <h2 class = "section__title section__title--services"> Quick Points</h2>
+            <div class = "services">
+                <div class ="service">
+                    <h3 class = "heading">Background </h3>
+                    <p> 20 years old, born and raised in central New Jersey. </p>
+                </div>
+                <div class ="service">
+                    <h3> Education </h3>
+                    <p> Sophomore at Rutgers University. Originally finance, wanted something more creative so I switched to Computer Science. Great Decision. </p>
+                </div>
+                <div class ="service">
+                    <h3> Interests </h3>
+                    <p>I want to be a software engineer-- I love coding and solving problems. Eventually, I want to run my own business. </p>
+                </div>
+                <div class = "service">
+                    <h3> Passions </h3>
+                    <p> Surfing, snowboarding, rock music, and everything in between</p>
+                </div>
+            </div>
+
+            <!-- <a href="#work" class="btn">My Work</a> -->
+        </section>
+
+        <!-- About me-->
+        <section class = "about-me" id="about">
+            <h2 class = "section__title section__title--about"> Experience </h2>
+            <p class = "section__subtitle section__subtitle--about">
+                STUDENT LEADERSHIP, DATA ANALYSIS & SWE
+            </p>
+        
+            <div class = "about-me__body">
+                <p><b>Summer 2019: </b> Orientation Leader at Rutgers University</p>
+                <p><b>Spring 2020: </b> L'Oreal USA Sales Data Analysis Intern</p>
+                <p><b>Summer 2020: </b> Marsh & McLennan Co. Finance Technology Intern (cancelled due to COVID-19) </p>
+                <p><b>Summer 2021: </b> Robust Wealth, Principal Investment Group incoming SWE Intern </p>
+            </div>
+
+        </section>
+        
+        <!-- My Work-->
+        <section class = "my-work" id="Work">
+            <h2 class="section__title section__title--work">My Work</h2>
+            <p class="section__subtitle section__subtitle--work">A Selection of my Range of Work</p>
+
+            <div class="Porfolio">
+                <a href="bday_portfolio.html" class = "Porfolio__item">
+                    <img src="imgs/bday.jpg" alt="" class="Porfolio__img">
+                </a>
+                <a href="djik_portfolio.html" class = "Porfolio__item">
+                    <img src="imgs/djik.png" alt="" class="Porfolio__img">
+                </a>
+                <a href="cache_portfolio.html" class = "Porfolio__item">
+                    <img src="imgs/cache.jpg" alt="" class="Porfolio__img">
+                </a>
+                <a href="chess.html" class = "Porfolio__item">
+                    <img src="imgs/chess.png" alt="" class="Porfolio__img">
+                </a>
+                <a href="photos.html" class = "Porfolio__item">
+                    <img src="imgs/photos.png" alt="" class="Porfolio__img">
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <a href="mailto:khajanchi.ibrahim@gmail.com" class= "footer__link">email me!</a>
+            <ul class="social-list">
+                <li class="social-list__item"> 
+                    <a class="social-list__link" href="https://github.com/ibbykhazanchi">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item"> 
+                    <a class="social-list__link" href="https://www.linkedin.com/in/ibrahimkhajanchi/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item"> 
+                    <a class="social-list__link" href="https://www.youtube.com/channel/UC16205vRkOJui8BtsWrK1BQ/videos">
+                        <i class="fab fa-youtube"></i></a>
+                </li>
+            </ul>
+        </footer>
+
+        <script src= "js/index.js"></script>
+    </body>
+</html>

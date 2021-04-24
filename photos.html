@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, intial-scale = 1.0">
+        <title> Ibrahim Porfolio Website</title>
+        <link rel = "stylesheet" href = "https://cdnjs.cloudfare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+        integrity = "sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+        <link href = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css" />
+        <script src="https://kit.fontawesome.com/ec2bbbe863.js" crossorigin="anonymous"></script>
+
+
+    </head>
+    <body>
+        <header>
+            <div class = "logo">
+                <img src = "" alt="">
+            </div>
+            <button class = "nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class = "nav__item"><a href="index.html" class="nav__list">Home</a></li>
+                    <li class = "nav__item"><a href="index.html#services" class="nav__list">Quick Points</a></li>
+                    <li class = "nav__item"><a href="index.html#about" class="nav__list">Experience</a></li>
+                    <li class = "nav__item"><a href="index.html#Work" class="nav__list">My Work</a></li>
+
+                </ul>
+            </nav>
+        </header>
+
+        <!--- Introduction-->
+        <section class="intro" id="home">
+            <h1 class = "section__title section__title--intro">
+                Desktop <strong> Photo Viewing App </strong>
+            </h1>
+            <p class= "section__subtitle section__subtitle--intro-portfolio">
+                A GUI for storing, viewing, tagging, captioning, and searching photos
+            </p>
+        </section>
+
+        <div class= "portfolio-item-individual">
+            <p> I've never really put my all into a project like I did for this one. At first, I didn't consider myself much of a UI kind of guy, but I wanted to challenge myself for this project by thinking in terms of design and the user experience. I made this project with my friend, Karl, for my Software Methodology class and I'm super proud of the outcome. Technologies used include <b>JavaFX</b> and <b>Scene Builder</b>.</p>
+            <iframe class = "portfolio-item-individual__img" width="560" height="315" src="https://www.youtube.com/embed/tMn78RYdnMg?start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>The first step in this project was figuring out the UI components for it. Sketching out my idea for how the app would look and feel, I knew I wanted there to be thumbnails displayed in a grid fashion with a sense of minimalism. After researching online, I figured out how to manifest the grid format by using JavaFX containers and widgets. I designed all of the different pages using Scene Builder, and when it was ready, I uploaded all of them to my eclipse workspace to get cracking on the back-end.</p>
+            <p> Now, I needed to figure out how to breathe life into all of the UI using java. Splitting the work up with my partner, we decided I would handle the grid components and he would handle the tagging and searching aspects. I found a clever way to dynamically add albums and photos to the gridpane without having to refresh. My next challenge was figuring out how I could get the user to interact with photos differently if they wanted to say, open, copy, delete, or move them. For this, I put code in to recognize left clicks as wanting to open the photo, and right clicks as wanting to edit them. Upon right clicking a photo, the photo is higlighted and a bunch of accessory buttons are enabled that allows the user to delete, copy, or move them. The rest of the project was a breeze. Check out the youtube link to see it in action!</p>
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <a href="mailto:khajanchi.ibrahim@gmail.com" class= "footer__link">email me!</a>
+            <ul class="social-list">
+                <li class="social-list__item"> 
+                    <a class="social-list__link" href="https://github.com/ibbykhazanchi">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item"> 
+                    <a class="social-list__link" href="https://www.linkedin.com/in/ibrahimkhajanchi/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item"> 
+                    <a class="social-list__link" href="https://www.youtube.com/channel/UC16205vRkOJui8BtsWrK1BQ/videos">
+                        <i class="fab fa-youtube"></i></a>
+                </li>
+            </ul>
+        </footer>
+
+        <script src= "js/index.js"></script>
+    </body>
+</html>
