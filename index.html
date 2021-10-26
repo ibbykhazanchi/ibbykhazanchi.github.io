@@ -1,157 +1,91 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset = "UTF-8">
-        <meta name = "viewport" content = "width=device-width, intial-scale = 1.0">
-        <title> Ibrahim Porfolio Website</title>
-        <link rel = "stylesheet" href = "https://cdnjs.cloudfare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
-        integrity = "sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
-        <link href = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/main.css" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        <script src="https://kit.fontawesome.com/ec2bbbe863.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg bg-light navbar-light">
-            <div class="container">
-                <a href="#" class="navbar-brand"> Ibrahim's Personal Website</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="ui.js" defer></script>
+    <script src="scrollAnim.js" defer></script>
+</head>
+<body>
+    <!-- Home section -->
+    <section class="bg-light text-dark p-5 text-center">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-4">
+            <h1 class="display-1">Aloha! &#129305; </h1>
+            <h1>I am Ibrahim Khajanchi</h1>
+            <h3 class="lead"> <i> passionate programmer ~ amateur surfer </i></h3>
+          </div>
+          <div class="col-4">
+            <img src="images/ibrahimLaptop.png" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <button 
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navmenu"
-                >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-                <div class="collapse navbar-collapse" id="navmenu">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a href="#home" class="nav-link"> Home </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#services" class="nav-link"> About </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#about" class="nav-link"> Experience </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#Work" class="nav-link"> Pieces </a>
-                        </li>
-                    </ul>
-                </div>
+    <!-- Quote Section -->
+    <section class="bg-light text-dark p-5 text-center">
+      <div class="container">
+        <div class="card border-light">
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <h4 class="mb-4">"Don’t get me started on the gravy. Very difficult to get right. See, a lot of people give up on the gravy. You cannot give up on the gravy. No gravy, no pie. Simple as that."</h4>
+              <footer class="blockquote-footer">Hot Pie in <cite title="Source Title">Game of Thrones</cite></footer>
+            </blockquote>
+          </div>
+      </div>
+      </div>
+    </section>
+
+
+    <!-- Projects section -->
+    <section class="bg-light text-dark p-5 text-center">
+      <h1 class="display-1 p-5"> Projects </h1>
+      
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card border-light project-card">
+            <img src="images/spotify.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Spotify Compatibility Test</h5>
+              <p class="card-text">I made this webapp to compare music tastes with friends using the Spotify API </p>
             </div>
-        </nav>
-
-        <!--- Introduction-->
-        <section class="intro" id="home">
-            <div class="container">
-                <div>
-                    <div>
-                        <h1 class = "section__title section__title--intro">
-                            Hi, I am <strong> Ibrahim Khajanchi </strong>
-                        </h1>
-                        <p class= "section__subtitle section__subtitle--intro">
-                            CS AND BUSINESS STUDENT
-                        </p>
-                    </div>
-                    <div>
-                        <img class=" d-none d-sm-block" src ="imgs/ibum.gif" style="margin-left: auto;
-                        margin-right: auto;
-                        min-width: 15%;
-                        width: 15%;">
-                    </div>
-                </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card border-light project-card">
+            <img src="images/fb.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Birthday Bot</h5>
+              <p class="card-text">Got tired of sending birthday messages to people as a formality. So I wrote a bot to do it for me :) </p>
             </div>
-        </section>
-
-        <!-- My Services-->
-        <section class = "my-services" id="services">
-            <h2 class = "section__title section__title--services"> Quick Points</h2>
-            <div class = "services">
-                <div class ="service">
-                    <h3 class = "heading">Background </h3>
-                    <p> 20 years old, born and raised in central New Jersey. </p>
-                </div>
-                <div class ="service">
-                    <h3> Education </h3>
-                    <p> Sophomore at Rutgers University. Originally finance, wanted something more creative so I switched to Computer Science. Great Decision. </p>
-                </div>
-                <div class ="service">
-                    <h3> Interests </h3>
-                    <p>I want to be a software engineer-- I love coding and solving problems. Eventually, I want to run my own business. </p>
-                </div>
-                <div class = "service">
-                    <h3> Passions </h3>
-                    <p> Surfing, snowboarding, rock music, and everything in between</p>
-                </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card border-light project-card">
+            <img src="images/mazePathfinder.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">A* Pathfinder Visualizer</h5>
+              <p class="card-text"> Wrote a visualizer for A* algorithm which depicts an agent finding the shortest path between two nodes. </p>
             </div>
-
-            <!-- <a href="#work" class="btn">My Work</a> -->
-        </section>
-
-        <!-- About me-->
-        <section class = "about-me" id="about">
-            <h2 class = "section__title section__title--about"> Experience </h2>
-            <p class = "section__subtitle section__subtitle--about">
-                STUDENT LEADERSHIP, DATA ANALYSIS & SWE
-            </p>
-        
-            <div class = "about-me__body">
-                <p><b>Summer 2019: </b> Rutgers University Orientation Leader</p>
-                <p><b>Spring 2020: </b> L'Oreal USA Sales Data Analysis Intern</p>
-                <p><b>Summer 2020: </b> Marsh & McLennan Co. Finance Technology Intern (cancelled due to COVID-19) </p>
-                <p><b>Summer 2021: </b> RobustWealth, incoming SWE Intern </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card border-light project-card">
+            <img src="images/photo.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Photo Desktop App</h5>
+              <p class="card-text">A photo & video album organizer, written with Java and JavaFX. </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
 
-        </section>
-        
-        <!-- My Work-->
-        <section class = "my-work" id="Work">
-            <h2 class="section__title section__title--work">Pieces</h2>
-            <p class="section__subtitle section__subtitle--work">Things I've Worked On</p>
-
-            <div class="Porfolio">
-                <a href="bday_portfolio.html" class = "Porfolio__item">
-                    <img src="imgs/bday.jpg" alt="" class="Porfolio__img">
-                </a>
-                <a href="djik_portfolio.html" class = "Porfolio__item">
-                    <img src="imgs/djik.png" alt="" class="Porfolio__img">
-                </a>
-                <a href="cache_portfolio.html" class = "Porfolio__item">
-                    <img src="imgs/cache.jpg" alt="" class="Porfolio__img">
-                </a>
-                <a href="chess.html" class = "Porfolio__item">
-                    <img src="imgs/chess.png" alt="" class="Porfolio__img">
-                </a>
-                <a href="photos.html" class = "Porfolio__item">
-                    <img src="imgs/photos.png" alt="" class="Porfolio__img">
-                </a>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <a href="mailto:khajanchi.ibrahim@gmail.com" class= "footer__link">email me!</a>
-            <ul class="social-list">
-                <li class="social-list__item"> 
-                    <a class="social-list__link" href="https://github.com/ibbykhazanchi">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-                <li class="social-list__item"> 
-                    <a class="social-list__link" href="https://www.linkedin.com/in/ibrahimkhajanchi/">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </li>
-                <li class="social-list__item"> 
-                    <a class="social-list__link" href="https://www.youtube.com/channel/UC16205vRkOJui8BtsWrK1BQ/videos">
-                        <i class="fab fa-youtube"></i></a>
-                </li>
-            </ul>
-        </footer>
-
-        <script src= "js/index.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    </body>
+</body>
 </html>
