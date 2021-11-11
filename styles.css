@@ -9,3 +9,12 @@
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   cursor: pointer;
 }
+
+.circle {
+  border-radius: 25px;
+}
+
+.custom-card {
+  color: inherit;
+  text-decoration: none;
+}

@@ -10,12 +10,12 @@
 </head>
 <body>
     <!-- Home section -->
-    <section class="bg-light text-dark p-5 text-center">
+    <section class="bg-dark text-light p-5 text-center">
       <div class="container">
         <div class="row justify-content-center align-items-center">
           <div class="col-4">
             <h1 class="display-1">Hey there! &#129305; </h1>
-            <h1>I am Ibrahim Khajanchi</h1>
+            <h1>I am  <span class="text-success"> Ibrahim Khajanchi </span> </h1>
             <h3 class="lead"> <i> passionate programmer ~ amateur surfer </i></h3>
           </div>
           <div class="col-4">
@@ -26,60 +26,81 @@
     </section>
 
     <!-- Quote Section -->
-    <section class="bg-light text-dark p-5 text-center">
+    <section class="bg-dark text-light p-5 text-center">
       <div class="container">
-        <div class="card border-light">
-          <div class="card-body">
-            <blockquote class="blockquote mb-0">
-              <h4 class="mb-4">"Don’t get me started on the gravy. Very difficult to get right. See, a lot of people give up on the gravy. You cannot give up on the gravy. No gravy, no pie. Simple as that."</h4>
-              <footer class="blockquote-footer">Hot Pie in <cite title="Source Title">Game of Thrones</cite></footer>
-            </blockquote>
-          </div>
-      </div>
+        <div class="container">
+          <div class="card bg-dark border-dark circle">
+            <div class="card-body bg-success circle">
+              <blockquote class="blockquote mb-0">
+                <h4 class="mb-4">"That's the best place in the world to be. In the tube"</h4>
+                <footer class="blockquote-footer text-light">Big Z <cite title="Source Title">Surfs Up</cite></footer>
+              </blockquote>
+            </div>
+        </div> 
+        </div>
       </div>
     </section>
 
 
     <!-- Projects section -->
-    <section class="bg-light text-dark p-5 text-center">
-      <h1 class="display-1 p-5"> Projects </h1>
+    <section class="bg-dark p-5 text-center">
+      <h1 class="display-1 p-5 text-light"> Projects </h1>
       
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-          <div class="card border-light project-card">
+          <a href="https://github.com/ibbykhazanchi/spotify-app" class="custom-card">
+          <div class="card border-dark project-card" >
             <img src="images/spotify.png" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body bg-danger">
               <h5 class="card-title">Spotify Compatibility Test</h5>
               <p class="card-text">I made this webapp to compare music tastes with friends using the Spotify API </p>
             </div>
           </div>
+        </a>
         </div>
         <div class="col">
-          <div class="card border-light project-card">
-            <img src="images/fb.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Birthday Bot</h5>
-              <p class="card-text">Got tired of sending birthday messages to people as a formality. So I wrote a bot to do it for me :) </p>
+          <a href="https://github.com/ibbykhazanchi/fb-birthday-bot" class="custom-card">
+            <div class="card border-dark project-card">
+              <img src="images/fb.png" class="card-img-top" alt="...">
+              <div class="card-body bg-warning">
+                <h5 class="card-title">Birthday Bot</h5>
+                <p class="card-text">Got tired of sending birthday messages to people as a formality. So I wrote a bot to do it for me :) </p>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="col">
-          <div class="card border-light project-card">
+          <a href="https://github.com/ibbykhazanchi/A-star-Al" class="custom-card">
+          <div class="card border-dark project-card">
             <img src="images/mazePathfinder.png" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body bg-success">
               <h5 class="card-title">A* Pathfinder Visualizer</h5>
               <p class="card-text"> Wrote a visualizer for A* algorithm which depicts an agent finding the shortest path between two nodes. </p>
             </div>
           </div>
+          </a>
         </div>
         <div class="col">
-          <div class="card border-light project-card">
+          <a href="https://www.youtube.com/watch?v=tMn78RYdnMg" class="custom-card">
+          <div class="card border-dark project-card">
             <img src="images/photo.png" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body bg-primary">
               <h5 class="card-title">Photo Desktop App</h5>
               <p class="card-text">A photo & video album organizer, written with Java and JavaFX. </p>
             </div>
           </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="https://github.com/ibbykhazanchi/twilio-sms-game" class="custom-card">
+          <div class="card border-dark project-card">
+            <img src="images/twilio.jpeg" class="card-img-top" alt="...">
+            <div class="card-body bg-danger">
+              <h5 class="card-title">Twilio SMS Trivia App</h5>
+              <p class="card-text"> A live trivia game using Twilio's Programmable SMS API</p>
+            </div>
+          </div>
+          </a>
         </div>
       </div>
     </section>
