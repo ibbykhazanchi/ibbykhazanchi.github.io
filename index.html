@@ -1,118 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+ 
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-</head>
+<title>Sneakerhead Signup<span id="selection-marker-1" class="redactor-selection-marker"></span></title>
+</head> 
+ 
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          Ibrahim K
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <section class="text-dark p-5 text-center">
-      <div class="container">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-4">
-            <h1 class="display-1 animate__animated animate__zoomIn"> hey there! &#129305; </h1>
-            <h1 class="display-5 animate__animated animate__zoomIn animate__delay-2s">i'm Ibrahim Khajanchi </h1>
-          </div>
-          <div class="col-4 d-none d-md-block">
-            <iframe src="https://giphy.com/embed/Ap3AwB2uPSKLC" width="480" height="480" frameBorder="0" 
-            class="giphy-embed d-none d-md-block " allowFullScreen></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects section -->
-    <section class="bg-dark p-5 text-center">
-      <h1 class="display-1 p-5 text-light"> Projects </h1>
-      
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <a href="https://github.com/ibbykhazanchi/spotify-app" class="custom-card">
-          <div class="card border-dark project-card" >
-            <img src="images/spotify.png" class="card-img-top" alt="...">
-            <div class="card-body bg-danger">
-              <h5 class="card-title">Spotify Compatibility Test</h5>
-              <p class="card-text">I made this webapp to compare music tastes with friends using the Spotify API </p>
-            </div>
-          </div>
-        </a>
-        </div>
-        <div class="col">
-          <a href="https://github.com/ibbykhazanchi/fb-birthday-bot" class="custom-card">
-            <div class="card border-dark project-card">
-              <img src="images/fb.png" class="card-img-top" alt="...">
-              <div class="card-body bg-warning">
-                <h5 class="card-title">Birthday Bot</h5>
-                <p class="card-text">Got tired of sending birthday messages to people as a formality. So I wrote a bot to do it for me :) </p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col">
-          <a href="https://github.com/ibbykhazanchi/A-star-Al" class="custom-card">
-          <div class="card border-dark project-card">
-            <img src="images/mazePathfinder.png" class="card-img-top" alt="...">
-            <div class="card-body bg-success">
-              <h5 class="card-title">A* Pathfinder Visualizer</h5>
-              <p class="card-text"> Wrote a visualizer for A* algorithm which depicts an agent finding the shortest path between two nodes. </p>
-            </div>
-          </div>
-          </a>
-        </div>
-        <div class="col">
-          <a href="https://www.youtube.com/watch?v=tMn78RYdnMg" class="custom-card">
-          <div class="card border-dark project-card">
-            <img src="images/photo.png" class="card-img-top" alt="...">
-            <div class="card-body bg-primary">
-              <h5 class="card-title">Photo Desktop App</h5>
-              <p class="card-text">A photo & video album organizer, written with Java and JavaFX. </p>
-            </div>
-          </div>
-          </a>
-        </div>
-        <div class="col">
-          <a href="https://github.com/ibbykhazanchi/twilio-sms-game" class="custom-card">
-          <div class="card border-dark project-card">
-            <img src="images/twilio.jpeg" class="card-img-top" alt="...">
-            <div class="card-body bg-danger">
-              <h5 class="card-title">Twilio SMS Trivia App</h5>
-              <p class="card-text"> A live trivia game using Twilio's Programmable SMS API</p>
-            </div>
-          </div>
-          </a>
-        </div>
-      </div>
-    </section>
-    
-
+<body>
+<h1>Sign up for the latest information on sneaker drops!</h1>
+<p>Enter your contact information if you would like to receive alerts about the best sneakers as soon as they drop.</p>
+<!--Location for users to enter their information to receive the sneakerhead newsletter-->
+<form name="sneakersignup" onsubmit="identify(event)">
+<br> <br>
+Name: <input name="fullname" required="" size="60" type="text"/>
+<br> <br>
+Email: <input name="email" required="" size="60" type="email"/>
+<br> <br>
+<label for="shoeType">Preferred Shoe</label>
+ <select id="shoeType" name="shoeType">
+   <option value="Running">Running</option>
+   <option value="Cross Trainers">Cross Trainers</option>
+   <option value="Sports">Sports</option>
+ </select>
+<br> <br>
+ <input name="submit" type="submit" value="submit"/> </form>
+<br>
+ 
+<script type="text/javascript">
+ function identify(e){
+ 
+   e.preventDefault();
+   var form = e.target;
+   var email = form["email"].value;
+   var fullname = form["fullname"].value;
+   var shoeType = form["shoeType"].value;
+   var user = {
+     email: email,
+     name: fullname
+   };
+// // Identify call
+//     analytics.identify('12345', {
+//       email: email,
+//       name: fullname,
+//       shoeType: shoeType
+//     });
+//  //  Sign-up Track call
+//     analytics.track('user signed up', user, function() {
+//       window.location.href = "";
+//     });
+// // Ecommerce Events
+   // analytics.track('Products Searched', {
+   //  query: 'kith air force 1'
+   // });
+ 
+   // analytics.track('Product List Viewed', {
+   //   list_id: 'hot_sneakers_2021',
+   //   category: 'Trendy',
+   //   products: [ {
+   //     product_id: '507f1f77bcf86cd799439011',
+   //     sku: '45790-32',
+   //     name: 'Air Jordan 4 - White / Military Blue - Fire Red',
+   //     price: 500.00,
+   //     position: 1,
+   //     category: 'Jordan',
+   //     url: 'https://www.example.com/product/path',
+   //     image_url: 'https://www.example.com/product/path.jpg'
+   //   }, {
+   //     product_id: '505bd76785ebb509fc183733',
+   //     sku: '46493-32',
+   //     name: 'Kith x Nike Air Force 1 “NYC”',
+   //     price: 1000.00,
+   //     position: 2,
+   //     category: 'Air Force 1'
+   // } ] });
+ 
+   // analytics.track('Product Viewed', {
+   //   product_id: '507f1f77bcf86cd799439011',
+   //   sku: 'G-32',
+   //   category: 'Jordan',
+   //   name: 'Air Jordan 4 - White / Military Blue - Fire Red',
+   //   brand: 'Nike',
+   //   variant: 'November 2019',
+   //   price: 500.00,
+   //   quantity: 1,
+   //   coupon: 'First_Purchase',
+   //   currency: 'usd',
+   //   position: 2,
+   //   value: 500,
+   //   last_name: 'Bowerman',
+   //   url: 'https://www.example.com/product/path',
+   //   image_url: 'https://www.example.com/product/path.jpg'
+   // });
+ 
+   // analytics.track('Product Added', {
+   //   cart_id: 'skdjsidjsdkdj29j',
+   //   product_id: '507f1f77bcf86cd799439011',
+   //   sku: 'G-32',
+   //   category: 'Jordan',
+   //   name: 'Air Jordan 4 - White / Military Blue - Fire Red',
+   //   brand: 'Nike',
+   //   variant: 'November 2019',
+   //   price: 500.00,
+   //   quantity: 1,
+   //   coupon: 'First_Purchase',
+   //   position: 2,
+   //   url: 'https://www.example.com/product/path',
+   //   image_url: 'https://www.example.com/product/path.jpg'
+   // });
+ 
+   // analytics.track('Order Completed', {
+   //   checkout_id: 'fksdjfsdjfisjf9sdfjsd9f',
+   //   order_id: '50314b8e9bcf000000000000',
+   //   affiliation: 'Google Store',
+   //   total: 555.00,
+   //   subtotal: 500.00,
+   //   revenue: 525.00,
+   //   shipping: 35.00,
+   //   tax: 20.00,
+   //   discount: 30.00,
+   //   coupon: 'First_Purchase',
+   //   currency: 'USD',
+   //   products: [
+   //     {
+   //       product_id: '507f1f77bcf86cd799439011',
+   //       sku: 'G-32',
+   //       name: 'Air Jordan 4 - White / Military Blue - Fire Red',
+   //       price: 500.00,
+   //       quantity: 1,
+   //       category: 'Jordan',
+   //       url: 'https://www.example.com/product/path',
+   //       image_url: 'https:///www.example.com/product/path.jpg'
+   //     }
+   //   ]
+   // });
+ }
+ 
+</script>
+ 
 </body>
 </html>
