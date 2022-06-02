@@ -1,12 +1,51 @@
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelectorAll('.nav__item');
 
-navToggle.addEventListener('click', () => {
-    document.body.classList.toggle('nav-open');
-});
+// async function getListOfSupportedLanguages(){
+//     fetch("https://libretranslate.de/translate", {
+//         method: "POST",
+//         body: JSON.stringify({
+//             q: "Hello! Welcome to Ibrahim's page",
+//             source: "en",
+//             target: "es",
+//             format: "text"
+//         }),
+//         headers: { "Content-Type": "application/json" }
+//     }).then((response) => {
+        
+//     }
+// }
 
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        document.body.classList.remove('nav-open');
+async function getGreeting(){
+    return fetch("https://libretranslate.de/translate", {
+        method: "POST",
+        body: JSON.stringify({
+            q: "Hello! Welcome to Ibrahim's page",
+            source: "en",
+            target: "es",
+            format: "text"
+        }),
+        headers: { "Content-Type": "application/json" }
     })
-})
+}
+
+
+async function changeGreetingText(){
+    // get supported languages
+    // const supportedLanguages = [];
+    // const supportedLanguagesResponse = await getListOfSupportedLanguages();
+    // if(supportedLanguagesResponse == null){
+    //     return;
+    // } else {
+    //     supportedLanguages = supportedLanguagesResponse.
+    // }
+
+    const getGreetingJSON = await getGreeting();
+    getGreetingJSON.then((json) => {
+        console.log(json.translatedText);
+    })
+    // if(greetingText != null){
+    //     document.querySelector('#dynamic-greeting').textContent = greetingText;
+    // }
+}
+
+changeGreetingText();
+
