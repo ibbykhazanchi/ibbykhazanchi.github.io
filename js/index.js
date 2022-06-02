@@ -1,51 +1,52 @@
 
-// async function getListOfSupportedLanguages(){
-//     fetch("https://libretranslate.de/translate", {
-//         method: "POST",
-//         body: JSON.stringify({
-//             q: "Hello! Welcome to Ibrahim's page",
-//             source: "en",
-//             target: "es",
-//             format: "text"
-//         }),
-//         headers: { "Content-Type": "application/json" }
-//     }).then((response) => {
-        
-//     }
-// }
+async function getListOfSupportedLanguages(){
+    let result =  await fetch("https://libretranslate.de/languages", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" }
+    })
+    .then((response) => response.json())
+    .then((data) => {return data})
+    return result;
+}
 
-async function getGreeting(){
-    return fetch("https://libretranslate.de/translate", {
+async function getGreeting(languageCode){
+    let result = await fetch("https://libretranslate.de/translate", {
         method: "POST",
         body: JSON.stringify({
             q: "Hello! Welcome to Ibrahim's page",
             source: "en",
-            target: "es",
+            target: languageCode,
             format: "text"
         }),
         headers: { "Content-Type": "application/json" }
     })
+    .then((response) => response.json())
+    .then((data) => {return data.translatedText})
+    return result;
 }
 
-
+function findRandomLanguageCode(languages){
+    let upper = languages.length + 1;
+    let randomIndex = Math.floor(Math.random() * upper)
+    return languages[randomIndex].code;
+}
 async function changeGreetingText(){
-    // get supported languages
-    // const supportedLanguages = [];
-    // const supportedLanguagesResponse = await getListOfSupportedLanguages();
-    // if(supportedLanguagesResponse == null){
-    //     return;
-    // } else {
-    //     supportedLanguages = supportedLanguagesResponse.
-    // }
+    //get languages
+    let languages = await getListOfSupportedLanguages()
+    let randomLanguageCode = findRandomLanguageCode(languages);
 
-    const getGreetingJSON = await getGreeting();
-    getGreetingJSON.then((json) => {
-        console.log(json.translatedText);
-    })
-    // if(greetingText != null){
-    //     document.querySelector('#dynamic-greeting').textContent = greetingText;
-    // }
+    // get greeting text
+    let greetingText = await getGreeting(randomLanguageCode);
+    document.querySelector('#dynamic-greeting').textContent = greetingText;
 }
 
-changeGreetingText();
+function changeGreetingProcess(delay){
+    const loopFunc = () => {
+        changeGreetingText();
+        setTimeout(loopFunc, delay);
+    }
+    loopFunc();
+}
+
+changeGreetingProcess(5000)
 
