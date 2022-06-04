@@ -13,7 +13,7 @@ async function getGreeting(languageCode){
     let result = await fetch("https://libretranslate.de/translate", {
         method: "POST",
         body: JSON.stringify({
-            q: "Hello! Welcome to Ibrahim's page",
+            q: "Hi! How's it going",
             source: "en",
             target: languageCode,
             format: "text"
@@ -26,10 +26,48 @@ async function getGreeting(languageCode){
 }
 
 function findRandomLanguageCode(languages){
-    let upper = languages.length + 1;
+    let upper = languages.length;
     let randomIndex = Math.floor(Math.random() * upper)
     return languages[randomIndex].code;
 }
+
+function typeWriterEffect(greeting, action){
+    if(action === "type"){
+        type(0, greeting);
+    }
+}
+
+async function type(i, greeting){
+    let prom = await new Promise((resolve, reject) => {
+        const loop = () => {
+            if(i < greeting.length){
+                document.querySelector('#dynamic-greeting').textContent += greeting.charAt(i);
+                i++;
+                setTimeout(loop, 150);
+            } else {
+                resolve("done");
+            }
+        }
+        loop()
+    })
+    setTimeout(() => {
+        backspace(i, greeting)
+    }, 10000)
+}
+
+function backspace(i, greeting){
+    const loop = () => {
+        if(i >= 0){
+            document.querySelector('#dynamic-greeting').textContent = greeting.substring(0, i);
+            i--;
+            setTimeout(loop, 150);
+        }
+    }
+    loop()
+}
+
+
+
 async function changeGreetingText(){
     //get languages
     let languages = await getListOfSupportedLanguages()
@@ -37,7 +75,7 @@ async function changeGreetingText(){
 
     // get greeting text
     let greetingText = await getGreeting(randomLanguageCode);
-    document.querySelector('#dynamic-greeting').textContent = greetingText;
+    type(0, greetingText);
 }
 
 function changeGreetingProcess(delay){
@@ -48,5 +86,7 @@ function changeGreetingProcess(delay){
     loopFunc();
 }
 
-changeGreetingProcess(5000)
+changeGreetingProcess(15000);
+
+
 

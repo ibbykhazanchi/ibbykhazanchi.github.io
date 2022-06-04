@@ -1,4 +1,15 @@
-
+.fixed {
+  position: relative;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  /* give it dimensions */
+  min-height: 1.2em;
+  width: 90%;
+  /* just for example presentation */
+  /* background-color: blue; */
+}
 .card-img-top {
   width: 100%;
   height: 40vh;
