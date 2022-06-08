@@ -13,7 +13,7 @@ async function getGreeting(languageCode){
     let result = await fetch("https://libretranslate.de/translate", {
         method: "POST",
         body: JSON.stringify({
-            q: "Hi! How's it going",
+            q: "Hi!",
             source: "en",
             target: languageCode,
             format: "text"
@@ -52,7 +52,7 @@ async function type(i, greeting){
     })
     setTimeout(() => {
         backspace(i, greeting)
-    }, 10000)
+    }, 4000)
 }
 
 function backspace(i, greeting){
@@ -86,7 +86,7 @@ function changeGreetingProcess(delay){
     loopFunc();
 }
 
-changeGreetingProcess(15000);
+changeGreetingProcess(7000);
 
 
 

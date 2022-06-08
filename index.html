@@ -20,6 +20,36 @@
       </div>
     </section>
 
+    <script src="https://threejs.org/build/three.js"></script> 
+<script>
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+    const renderer = new THREE.WebGLRenderer();
+    let color = new THREE.Color( 0xFFFFFF)
+    scene.background = color;
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    document.body.appendChild( renderer.domElement );
+
+    const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+    const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+    const cube = new THREE.Mesh( geometry, material );
+    scene.add( cube );
+
+    camera.position.z = 5;
+
+    function animate() {
+        requestAnimationFrame( animate );
+
+        cube.rotation.x += 0.01;
+        cube.rotation.y += 0.01;
+
+        renderer.render( scene, camera );
+    };
+
+    animate();
+</script>
+
+
     <!-- Projects section -->
     <section class="p-5 text-center">
       <h1 class="display-1 fw-bold p-5"> Projects </h1>
@@ -34,17 +64,6 @@
             </div>
           </div>
         </a>
-        </div>
-        <div class="col">
-          <a href="https://github.com/ibbykhazanchi/fb-birthday-bot" class="custom-card">
-            <div class="card border-dark project-card">
-              <img src="images/fb.png" class="card-img-top" alt="...">
-              <div class="card-body bg-warning">
-                <h5 class="card-title">Birthday Bot</h5>
-                <p class="card-text">Got tired of sending birthday messages to people as a formality. So I wrote a bot to do it for me :) </p>
-              </div>
-            </div>
-          </a>
         </div>
         <div class="col">
           <a href="https://github.com/ibbykhazanchi/A-star-Al" class="custom-card">
