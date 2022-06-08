@@ -42,15 +42,16 @@ Email: <input name="email" required="" size="60" type="email"/>
  </select>
 <br> <br>
  <input name="submit" type="submit" value="submit"/> </form>
- <button onclick="clearShoppingCart">Clear Your Shopping Cart</button>
+ <button onclick="clearShoppingCart()">Clear Your Shopping Cart</button>
 <br>
  
 <script type="text/javascript">
 
   function clearShoppingCart(){
+    console.log("clearing shopping cart")
     analytics.track('Clear Shopping Cart', {});
   }
- function identify(e){
+  function identify(e){
  
    e.preventDefault();
    var form = e.target;
