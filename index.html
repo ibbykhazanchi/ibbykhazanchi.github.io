@@ -1,105 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-</head>
-<body>
+<html lang="en" data-bs-theme="light">
+  <head>
+      <script src="https://kit.fontawesome.com/f1694178e0.js" crossorigin="anonymous"></script>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title> Ibby's Website </title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    </head>
+  <body>  
 
-  <!-- Intro section -->
-    <section class="text-dark p-5 text-center">
-      <div class="container">
-          <h1 class="display-1 fw-bold fixed" id="dynamic-greeting"></h1>
-          <h1 class="display-1 fw-bold"> I am ibrahim khajanchi</h1>
-        </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand navbar-light">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse p-2" id="navbarNavAltMarkup">
+        <i class="fa-solid fa-moon fa-2x" id="mode-button" onclick="changeTheme()" style="cursor:pointer;"> </i>
       </div>
-    </section>
+    </nav> 
+    
+    <!-- Title -->
+    <div class="container p-5 text-center">
+      <h3 class="display-3 fw-bold"> Ibby Khajanchi</h3>
+    </div>
+    <div class="container p-1 text-center">
+      <button type="button" class="btn btn-light"> Projects </button>
+      <button type="button" class="btn btn-light"> Blog </button>
+    </div>
 
-    <script src="https://threejs.org/build/three.js"></script> 
-<script>
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-    const renderer = new THREE.WebGLRenderer();
-    let color = new THREE.Color( 0xFFFFFF)
-    scene.background = color;
-    renderer.setSize( window.innerWidth, window.innerHeight );
-    document.body.appendChild( renderer.domElement );
-
-    const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-    const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-    const cube = new THREE.Mesh( geometry, material );
-    scene.add( cube );
-
-    camera.position.z = 5;
-
-    function animate() {
-        requestAnimationFrame( animate );
-
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
-
-        renderer.render( scene, camera );
-    };
-
-    animate();
-</script>
-
-
-    <!-- Projects section -->
-    <section class="p-5 text-center">
-      <h1 class="display-1 fw-bold p-5"> Projects </h1>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <a href="https://github.com/ibbykhazanchi/spotify-app" class="custom-card">
-          <div class="card border-dark project-card" >
-            <img src="images/spotify.png" class="card-img-top" alt="...">
-            <div class="card-body bg-danger">
-              <h5 class="card-title">Spotify Compatibility Test</h5>
-              <p class="card-text">I made this webapp to compare music tastes with friends using the Spotify API </p>
-            </div>
-          </div>
-        </a>
-        </div>
-        <div class="col">
-          <a href="https://github.com/ibbykhazanchi/A-star-Al" class="custom-card">
-          <div class="card border-dark project-card">
-            <img src="images/mazePathfinder.png" class="card-img-top" alt="...">
-            <div class="card-body bg-success">
-              <h5 class="card-title">A* Pathfinder Visualizer</h5>
-              <p class="card-text"> Wrote a visualizer for A* algorithm which depicts an agent finding the shortest path between two nodes. </p>
-            </div>
-          </div>
-          </a>
-        </div>
-        <div class="col">
-          <a href="https://www.youtube.com/watch?v=tMn78RYdnMg" class="custom-card">
-          <div class="card border-dark project-card">
-            <img src="images/photo.png" class="card-img-top" alt="...">
-            <div class="card-body bg-primary">
-              <h5 class="card-title">Photo Desktop App</h5>
-              <p class="card-text">A photo & video album organizer, written with Java and JavaFX. </p>
-            </div>
-          </div>
-          </a>
-        </div>
-        <div class="col">
-          <a href="https://github.com/ibbykhazanchi/twilio-sms-game" class="custom-card">
-          <div class="card border-dark project-card">
-            <img src="images/twilio.jpeg" class="card-img-top" alt="...">
-            <div class="card-body bg-danger">
-              <h5 class="card-title">Twilio SMS Trivia App</h5>
-              <p class="card-text"> A live trivia game using Twilio's Programmable SMS API</p>
-            </div>
-          </div>
-          </a>
-        </div>
-      </div>
-    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
-</body>
+  </body>
 </html>
