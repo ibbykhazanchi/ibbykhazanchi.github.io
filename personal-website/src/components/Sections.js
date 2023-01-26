@@ -6,10 +6,10 @@ const Sections = () => {
     return (
         <Container className='d-flex p-5 align-items-center justify-content-center'>
             <Stack direction='horizontal' gap={2}>
-                <Button variant="light">
+                <Button variant="light" size='lg'>
                     Projects
                 </Button>
-                <Button variant="light">
+                <Button variant="light" size='lg'>
                     Blog
                 </Button>
             </Stack>
