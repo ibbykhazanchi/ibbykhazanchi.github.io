@@ -43,7 +43,7 @@ const Board = () => {
       setSquares(updatedSquares)
 
       //game is over
-      if(!updatedSquares.includes(null) || checkForWinner(updatedSquares)){
+      if(checkForWinner(updatedSquares) || !updatedSquares.includes(null)){
         setGameOver(true)
       }
     }
