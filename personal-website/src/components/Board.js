@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { minimax, MAXIMIZER} from "./Minimax"
 import Square from './Square'
 import Button from 'react-bootstrap/Button'
 
@@ -36,11 +37,16 @@ const Board = () => {
       const updatedSquares = squares.slice();
       if(xMove){
         updatedSquares[i] = 'X'
-      } else {
-        updatedSquares[i] = 'O'
       }
-      setXMove(!xMove)
       setSquares(updatedSquares)
+
+
+      //now AI time 
+      const aiMove = minimax(updatedSquares, MAXIMIZER).spotToMove
+      if(aiMove !== -1){
+        updatedSquares[aiMove] = 'O'
+        setSquares(updatedSquares)
+      }
 
       //game is over
       if(checkForWinner(updatedSquares) || !updatedSquares.includes(null)){
