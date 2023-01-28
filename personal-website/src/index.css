@@ -29,6 +29,7 @@ body {
     padding: 0;
     text-align: center;
     width: 75px;
+    color:black;
   }
   
   .square:focus {
