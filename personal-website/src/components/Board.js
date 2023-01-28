@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { minimax, MAXIMIZER} from "./Minimax"
 import Square from './Square'
 import Button from 'react-bootstrap/Button'
 
 const Board = () => {
     const [squares, setSquares] = useState(Array(9).fill(null))
-    const [xMove, setXMove] = useState(true)
     const [winner, setWinner] = useState("")
     const [gameOver, setGameOver] = useState(false)
+    const [aiThinking, setAiThinking] = useState(false)
 
     const checkForWinner = (squares) => {
       const possibleWins = [
@@ -29,21 +29,24 @@ const Board = () => {
       }
     }
 
-    const handleClick = (i) => {
-      if(squares[i] || winner){
+    const delay = ms => {
+      return new Promise(resolve => setTimeout(resolve, ms))
+    }
+    const handleClick = async (i) => {
+      if(aiThinking || squares[i] || winner){
         return
       }
 
       const updatedSquares = squares.slice();
-      if(xMove){
-        updatedSquares[i] = 'X'
-      }
+      updatedSquares[i] = 'X'
       setSquares(updatedSquares)
-
 
       //now AI time 
       const aiMove = minimax(updatedSquares, MAXIMIZER).spotToMove
       if(aiMove !== -1){
+        setAiThinking(true)
+        await delay(1250)
+        setAiThinking(false)
         updatedSquares[aiMove] = 'O'
         setSquares(updatedSquares)
       }
@@ -88,7 +91,6 @@ const Board = () => {
 
     const restart = () => {
       setSquares(Array(9).fill(null))
-      setXMove(true)
       setWinner("")
       setGameOver(false)
     }
