@@ -27,6 +27,7 @@ const Game = () => {
     return (
       <div>
         <div className="game">
+          <h2 className="display-9 p-2"> Can you beat the algorithm? </h2>
             <Board 
               setWinner={setWinner} 
               setGameOver = {setGameOver} 
