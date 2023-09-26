@@ -51,11 +51,17 @@ body {
     margin-left: 20px;
   }
 
-  .test {
-    display: flex;
-    width: 100%;
-    max-width: 60%;
-    margin: 0 auto;
-    justify-content: center;
+  .landing-page {
+    color: white;
+
+    background-color: aquamarine;
+    background-size: cover;
+    background-image: url("photos/ibum_surf.jpg");
+    background-repeat: no-repeat;
+
+    height: 100vh;
+
+    padding-top: 175px;
+    padding-bottom: 200px;
   }
   
