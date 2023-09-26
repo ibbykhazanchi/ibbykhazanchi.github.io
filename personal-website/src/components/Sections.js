@@ -5,7 +5,7 @@ import Stack from 'react-bootstrap/Stack'
 const Sections = () => {
     return (
         <div className='text-center'>
-            <Container className='p-5 align-items-center justify-content-center'>
+            <Container className='align-items-center justify-content-center'>
                 <h4 className="display-4 fw-bold pt-3"> Who am I? </h4>
                 <ul>
                     <li> <h2 className='display-9 p-1'> Engineer @ Bloomberg </h2></li>
