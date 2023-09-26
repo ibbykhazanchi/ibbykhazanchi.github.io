@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.e23f5e74.css",
-    "main.js": "/static/js/main.ea8af0d3.js",
+    "main.css": "/static/css/main.0c41999a.css",
+    "main.js": "/static/js/main.46d7ab04.js",
+    "static/media/ibum_surf.jpg": "/static/media/ibum_surf.709eb9d76b5e0be50474.jpg",
     "index.html": "/index.html",
-    "main.e23f5e74.css.map": "/static/css/main.e23f5e74.css.map",
-    "main.ea8af0d3.js.map": "/static/js/main.ea8af0d3.js.map"
+    "main.0c41999a.css.map": "/static/css/main.0c41999a.css.map",
+    "main.46d7ab04.js.map": "/static/js/main.46d7ab04.js.map"
   },
   "entrypoints": [
-    "static/css/main.e23f5e74.css",
-    "static/js/main.ea8af0d3.js"
+    "static/css/main.0c41999a.css",
+    "static/js/main.46d7ab04.js"
   ]
 }
