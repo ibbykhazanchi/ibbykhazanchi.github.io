@@ -1,5 +1,5 @@
 import Header from './components/Header'
-import Game from './components/Game'
+import Game from './components/TicTacToe/Game'
 import Sections from './components/Sections'
 import "bootstrap/dist/css/bootstrap.min.css"
 
