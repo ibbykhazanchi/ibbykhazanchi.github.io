@@ -66,4 +66,12 @@ body {
     padding-top: 100px;
     padding-bottom: 200px;
   }
+
+  .full-screen {
+    height: 100vh;
+  }
+
+  .no-bullet {
+    list-style-type: none;
+  }
   
