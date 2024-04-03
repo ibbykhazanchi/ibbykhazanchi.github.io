@@ -1,7 +1,7 @@
 const Work = () => {
     return (
-        <div className="full-screen">
-            <h2 className='display-9 p-1'> Work I'm Doing </h2>
+        <div>
+            <h4 className="display-4 fw-bold pt-5"> stuff i've done </h4>
         </div>
     )
 }

@@ -1,7 +1,8 @@
 const LandingPage = () => {
     return (
-        <div className="landing-page text-center">
-            <h1 className="display-1 fw-bold"> Hey, I'm Ibby!</h1>
+        <div className="text-center">
+            <h4 className="display-4 fw-bold pb-1 pt-2"> hey👋i'm ibby!</h4>
+            <div className="landing-page"></div>
         </div>
     )
 }
