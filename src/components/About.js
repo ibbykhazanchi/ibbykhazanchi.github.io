@@ -4,16 +4,16 @@ const About = () => {
     
     const aboutMeArray = [
         {
-            noun: "swe @ bloomberg 📈",
+            noun: "swe @ bloomberg working on data pipelines infra 🔧",
         },
         {
-            noun: "nyc 🏙️"
+            noun: "living in manhattan, nyc 🏙️"
         },
         {
-            noun: "rutgers '23 🏫"
+            noun: "studied cs & business at rutgers '23 🏫"
         },
         {
-            noun: "surfer & snowboarder 🏄"
+            noun: "can & will probably talk about surfing all day long 🏄"
         }
     ]
 
@@ -25,7 +25,7 @@ const About = () => {
                             {aboutMeArray.map(({noun, imagePath}) => {
                                 return( 
                                 <>
-                                    <h3 className='display-6 p-1'> {noun} </h3>
+                                    <h4 className='p-1'> {noun} </h4>
                                 </>
                                 )
                             })}

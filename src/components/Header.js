@@ -7,7 +7,7 @@ const Header = () => {
       return (
         <Navbar data-bs-theme="light">
         <Container>
-            <Navbar.Brand href="#home">ibby khajanchi</Navbar.Brand>
+            <Navbar.Brand href="#home">ibby khajanchi 💻</Navbar.Brand>
             <Nav className="mr-auto">
                 <Nav.Link href="#home">home</Nav.Link>
                 <Nav.Link href="#home">blog</Nav.Link>
