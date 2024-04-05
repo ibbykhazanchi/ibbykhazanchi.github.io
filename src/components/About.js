@@ -4,13 +4,13 @@ const About = () => {
     
     const aboutMeArray = [
         {
-            noun: "engineer @ bloomberg 📈",
+            noun: "swe @ bloomberg 📈",
         },
         {
-            noun: "rutgers alum 🏫"
+            noun: "nyc 🏙️"
         },
         {
-            noun: "technologist 💻"
+            noun: "rutgers '23 🏫"
         },
         {
             noun: "surfer & snowboarder 🏄"
@@ -19,7 +19,7 @@ const About = () => {
 
     return( 
         <div>
-            <h4 className="display-4 fw-bold pt-5"> who am i?</h4>
+            <h4 className="display-4 fw-bold pt-5"> about me</h4>
                 <Container className='d-flex align-items-center justify-content-center'>
                         <div>
                             {aboutMeArray.map(({noun, imagePath}) => {
